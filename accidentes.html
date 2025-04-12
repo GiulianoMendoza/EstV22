@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./gycestudio2.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/preguntas.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <title>Accidentes</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            /* Evita el deslizamiento horizontal */
+            background-color: #e2e1e1;
+        }
+
+        .quienes-somos p {
+            margin-bottom: 1.5rem;
+            /* Añade separación entre los párrafos */
+        }
+
+        .footer-container {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-light">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand fw-bold" href="index.html">G&C</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal"
+                    aria-controls="navPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navPrincipal">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Nosotros.html">Quiénes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="AreasDI.html">Áreas de incumbencia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" id="chatcontac">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <div class="container quienes-somos">
+        <section class="about" id="about">
+            <h1 class="text-quienes text-center">
+                ACCIDENTES DE TRABAJO Y/O <span>ENFERMEDADES PROFESIONALES</span>
+                <br>
+                <br>
+                <!--<h2 class="text-center">IMPORTANCIA FRENTE A LA CARRERA PROFESIONAL.</h2>-->
+            </h1>
+            <p class="text-center">
+                El personal policial se encuentra sumido en tareas de riesgo durante toda su carrera. Bajo este
+                panorama, puede dar lugar a que el uniformado sufra accidentes de trabajo y/o enfermedades profesionales
+                listadas o no listadas. Estos eventos violentos pueden ocurrir durante la jornada laboral, en el
+                trayecto de ida a o vuelta al
+                servicio o, incluso, al intervenir, franco de servicio, repeliendo un ilícito perpetrado por un
+                delincuente en contra de un tercero o de su propia persona.
+                <br>
+                <br>
+                En todos los casos, la ART contratada debe responder brindando la debida atención médica, para que el
+                accidentado recupere el estado de salud al mismo estado que se encontraba con anterioridad al accidente.
+                Asimismo, debe abonar los haberes (incluso aumentos y sumas variables) del personal policial hasta
+                obtener alta médica. En la gran mayoría de los casos, la ART deberá indemnizar al trabajador, sin
+                embargo, cubriéndose bajo
+                la normativa vigente, ésta rechazará el accidente, negará la existencia de secuelas incapacitantes o las
+                disminuirá arbitrariamente afectando seriamente las sumas que el accidentado debería percibir por
+                derecho. Es muy común que las aseguradoras de riesgos del trabajo señalen que sus lesiones son
+                preexistentes o no guardan relación con el siniestro padecido, no se deje engañar, no son más que
+                recursos para evadir su responsabilidad.
+                <br>
+                <br>
+                Nosotros nos ocupamos de velar para que la ART brinde la atención correspondiente, cuidando de
+                garantizar que recupere su condición psicofísica; sin embargo, si a pesar de la atención debida presenta
+                secuelas incapacitantes, garantizamos que reciba la indemnización que realmente corresponda, formulando
+                los planteos administrativos y judiciales que convengan al caso, cerciorándonos que la indemnización
+                debida se ajuste a las lesiones padecidas. Paralelamente, asesoramos y/o realizamos las peticiones que
+                cada caso pudiera suscitar de manera
+                anterior y/o posterior al alta médica respecto al control que medicina laboral o junta médica policial
+                realizaran. Tenga presente que el estado policial puede verse afectado frente a un accidente de trabajo.
+                Nosotros
+                poseemos amplia experiencia brindado al personal policial un doble seguimiento, frente al trámite en
+                Comisiones Médicas como así también en Junta Médica policial, Medicina laboral, solicitando el
+                encuadramiento de lesiones y/o el retiro obligatorio en caso de que sea necesario.
+                Recuerde que tiene un plazo de dos años para reclamar desde que el accidente haya acontecido.
+            </p>
+        </section>
+    </div>
+    <div id="chatbotModal" class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Chatbot</h5>
+                    <button type="button" class="close" id="closeChatbot">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="robotImage" class="info-imagen1 text-center">
+                        <img src="botcin.png" alt="Imagen del robot" class="img-fluid">
+                    </div>
+                    <div id="chatbot-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="chatbot-button position-fixed" id="openChatbot"
+        style="bottom: 20px; right: 20px; z-index: 1050; border: none; background: transparent;">
+        <img src="botcin.png" alt="Chatbot" class="img-fluid" style="max-width: 70px;" />
+    </button>
+
+    <footer class="footer-container mt-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>General</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="Nosotros.html" class="text-decoration-none text-dark">Acerca de</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Navegar en GYC</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#hacemos" class="text-decoration-none text-dark">Servicios</a></li>
+                        <li><a href="index.html" class="text-decoration-none text-dark">Inicio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="JS/Renders/bot.js"></script>
+    <script type="module" src="JS/Renders/footer.js"></script>
+    <script type="module" src="JS/Renders/nav.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
