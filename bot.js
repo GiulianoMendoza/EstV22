@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatbotImage = document.getElementById("chatbotImage");
     if (chatbotImage) {
         chatbotImage.onclick = function () {
-            modal.style.right = "90px";
+            modal.style.left = "90px";
             modal.style.display = "block";
             switchToRobotImage();
         };
@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatbotContac = document.getElementById("chatcontac");
     if (chatbotContac) {
         chatbotContac.onclick = function () {
-            modal.style.right = "90px";
+            modal.style.left = "90px";
             modal.style.display = "block";
             switchToRobotImage();
         };
@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactoDropdown = document.getElementById("contactoDropdown");
     if (contactoDropdown) {
         contactoDropdown.onclick = function () {
-            modal.style.right = "90px";
+            modal.style.left = "90px";
             modal.style.display = "block";
             switchToRobotImage();
         };
@@ -528,13 +528,13 @@ function switchToRobotImage() {
 }
 
 btn.onclick = function () {
-    modal.style.right = "90px";
+    modal.style.left = "auto";
     modal.style.display = "block";
     switchToRobotImage();
 }
 
 span.onclick = function () {
-    modal.style.right = "-320px";
+    modal.style.left = "-320px";
     setTimeout(() => {
         generarPreguntasIniciales();
         modal.style.display = "none";
@@ -544,7 +544,7 @@ span.onclick = function () {
 
 window.onclick = function (event) {
     if (event.target == modal) {
-        modal.style.right = "-320px";
+        modal.style.left = "-320px";
         setTimeout(() => {
             modal.style.display = "none";
             switchToRobotImage();

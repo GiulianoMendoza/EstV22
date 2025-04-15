@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Estudio Jurídico GYC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bot.css" rel="stylesheet">
     <style>
         body {
             background-color: #e2e1e1;
@@ -58,6 +59,75 @@
             margin-top: -30px;
             padding-left: 30px;
         }
+
+        /* Mantener el estilo del popup */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            /* Cambiado de 'none' a 'flex' */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            /* Fuente Bootstrap */
+        }
+
+        .popup-content {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            /* Fuente Bootstrap */
+        }
+
+        .popup-content p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        #close-popup {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #efb810;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #close-popup:hover {
+            background-color: #856c23;
+        }
+
+        /* Responsivo para pantallas medianas (tablets) */
+        @media (max-width: 768px) {
+            .popup-content {
+                font-size: 0.95rem;
+                padding: 18px;
+            }
+        }
+
+        /* Responsivo para pantallas chicas (móviles) */
+        @media (max-width: 480px) {
+            .popup-content {
+                font-size: 0.9rem;
+                padding: 16px;
+            }
+
+            #close-popup {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -90,39 +160,39 @@
 
     <section class="py-5 bg-light">
         <div class="container-fluid px-3 px-md-5">
-          <div class="row align-items-center">
-            
-<!-- Texto -->
-<div class="col-md-6 col-lg-7 text-center text-md-start mb-5 mb-md-0 pe-lg-5">
-    <h1 class="fw-bold mb-4 fs-1 fs-md-2 text-justify text-md-start">
-        Abogados especialistas en personal policial y cuerpo de bomberos de la Ciudad
-      </h1>
-    <p class="lead text-muted mb-4 text-md-start text-justify">
-      Brindamos asesoramiento jurídico integral con compromiso y experiencia.
-    </p>
-    <div class="d-flex justify-content-center justify-content-md-start">
-      <a href="Nosotros.html" class="btn btn-dark btn-lg shadow-sm px-4 py-2">
-        Más información
-      </a>
-    </div>
-  </div>
-  
-      
-            <!-- Logo -->
-            <div class="col-md-6 col-lg-5 text-center">
-              <div class="mx-auto" style="max-width: 250px;">
-                <img src="LOGO.png" alt="Estudio GYC" class="img-fluid mb-3" />
-                <h2 class="fw-bold text-dark">G & C</h2>
-                <h4 class="text-muted">Estudio Jurídico</h4>
-              </div>
+            <div class="row align-items-center">
+
+                <!-- Texto -->
+                <div class="col-md-6 col-lg-7 text-center text-md-start mb-5 mb-md-0 pe-lg-5">
+                    <h1 class="fw-bold mb-4 fs-1 fs-md-2 text-justify text-md-start">
+                        Abogados especialistas en personal policial y cuerpo de bomberos de la Ciudad
+                    </h1>
+                    <p class="lead text-muted mb-4 text-md-start text-justify">
+                        Brindamos asesoramiento jurídico integral con compromiso y experiencia.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <a href="Nosotros.html" class="btn btn-dark btn-lg shadow-sm px-4 py-2">
+                            Más información
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Logo -->
+                <div class="col-md-6 col-lg-5 text-center">
+                    <div class="mx-auto" style="max-width: 250px;">
+                        <img src="LOGO.png" alt="Estudio GYC" class="img-fluid mb-3" />
+                        <h2 class="fw-bold text-dark">G & C</h2>
+                        <h4 class="text-muted">Estudio Jurídico</h4>
+                    </div>
+                </div>
+
             </div>
-      
-          </div>
         </div>
-      </section>
-      
-  
-  
+    </section>
+
+
+
     <div class="text-center py-5">
         <h1 class="my-3">Quiénes <span class="text-primary">Somos</span></h1>
         <p>Desde hace más de 14 años procuramos asesorar, defender y/o reclamar los derechos de los uniformados...</p>
@@ -228,37 +298,32 @@
         </div>
     </section>
 
-    <!-- MODAL CHATBOT 
-    <div id="chatbotModal" class="modal d-flex align-items-center justify-content-center" tabindex="-1"
-        style="display: none;">
-
-        <div id="chatbot-container"></div>
-    </div>
-    </div>
-    POPUP INFORMATIVO 
-    <div id="popup" class="popup d-flex align-items-center justify-content-center"
-        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1051; display: none;">
-        <div class="popup-content bg-white text-dark p-4 rounded shadow" style="max-width: 700px; width: 90%;">
-            <h2 class="mb-3">¡ESTE MENSAJE ES IMPORTANTE!</h2>
-            <p class="mb-3">
-                ANTE UN ACCIDENTE DE TRABAJO, NO SE DEJE ENGAÑAR. NUESTRO ESTUDIO SE OCUPA INTEGRAMENTE DEL ASUNTO, NO
-                SOLO DEL ACCIDENTE ANTE LA ART, SINO EN SEDE ADMINISTRATIVA ANTE LAS SUCESIVAS INSTANCIAS QUE IMPLIQUEN
-                VOLVER AL SERVICIO EFECTIVO O EVALUAR UN RETIRO OBLIGATORIO.
-                NO LO DEJAMOS SOLO Y SABEMOS CÓMO REPERCUTE EL SINIESTRO EN LAS DISTINTAS ÁREAS POLICIALES Y/O DEL
-                MINISTERIO DE SEGURIDAD.
-                MÁS DE 14 AÑOS DE TRAYECTORIA ACOMPAÑANDO AL PERSONAL POLICIAL Y DEL CUERPO DE BOMBEROS.
-            </p>
-            <div class="text-end">
-                <button id="close-popup" class="btn btn-secondary">Cerrar</button>
-            </div>
-        </div>
-    </div>-->
-    <!--BOTÓN CHATBOT FLOTANTE -->
     <button class="chatbot-button position-fixed" id="openChatbot"
         style="bottom: 20px; right: 20px; z-index: 1050; border: none; background: transparent;">
         <img src="botcin.png" alt="Chatbot" class="img-fluid" style="max-width: 70px;" />
     </button>
-
+    <div id="chatbotModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeChatbot">&times;</span>
+            <div id="robotImage" class="info-imagen1">
+                <img src="botcin3.png" alt="Imagen del robot">
+            </div>
+            <div id="chatbot-container"></div>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>¡ESTE MENSAJE ES IMPORTANTE!</h2>
+            <p>ANTE UN ACCIDENTE DE TRABAJO, NO SE DEJE ENGAÑAR. NUESTRO ESTUDIO SE OCUPA INTEGRAMENTE DEL ASUNTO, NO
+                SOLO DEL ACCIDENTE ANTE LA ART, SINO EN SEDE ADMINISTRATIVA ANTE LAS SUCESIVAS INSTANCIAS QUE IMPLIQUEN
+                VOLVER AL SERVICIO EFECTIVO O EVALUAR UN RETIRO OBLIGATORIO.
+                NO LO DEJAMOS SOLO Y SABEMOS CÓMO REPERCUTE EL SINIESTRO EN LAS DISTINTAS ÁREAS POLICIALES Y/O DEL
+                MINISTERIO DE SEGURIDAD.
+                MÁS DE 14 AÑOS DE TRAYECTORIA ACOMPAÑANDO AL PERSONAL POLICIAL Y DEL CUERPO DE BOMBEROS
+            </p>
+            <button id="close-popup">Cerrar</button>
+        </div>
+    </div>
     <!-- FOOTER -->
     <footer class="footer-container mt-5">
         <div class="container text-center">
@@ -280,11 +345,10 @@
             </div>
         </div>
     </footer>
-    
-    <!-- BOOTSTRAP JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="bot.js"></script>
-    <script src="popup.js"></script>
+    <script type="module" src="popup.js"></script>
 </body>
 
 </html>
