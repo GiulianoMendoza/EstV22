@@ -1,0 +1,9 @@
+.quienes-somos p {
+    margin-bottom: 1.5rem;
+    /* Añade separación entre los párrafos */
+}
+
+.color {
+    color: #004085;
+    /* Color personalizado para los títulos */
+}

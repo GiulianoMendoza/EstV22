@@ -382,24 +382,21 @@ document.addEventListener('DOMContentLoaded', () => {
         chatbotImage.onclick = function () {
             modal.style.left = "90px";
             modal.style.display = "block";
-            switchToRobotImage();
         };
     }
 
     const chatbotContac = document.getElementById("chatcontac");
     if (chatbotContac) {
         chatbotContac.onclick = function () {
-            modal.style.left = "90px";
+            modal.style.left = "auto";
             modal.style.display = "block";
-            switchToRobotImage();
         };
     }
     const contactoDropdown = document.getElementById("contactoDropdown");
     if (contactoDropdown) {
         contactoDropdown.onclick = function () {
-            modal.style.left = "90px";
+            modal.style.left = "auto";
             modal.style.display = "block";
-            switchToRobotImage();
         };
     }
 });
@@ -521,16 +518,10 @@ generarPreguntasIniciales();
 const modal = document.getElementById("chatbotModal");
 const btn = document.getElementById("openChatbot");
 const span = document.getElementById("closeChatbot");
-const robotImage = document.getElementById("robotImage");
-
-function switchToRobotImage() {
-    robotImage.style.display = "block";
-}
 
 btn.onclick = function () {
     modal.style.left = "auto";
     modal.style.display = "block";
-    switchToRobotImage();
 }
 
 span.onclick = function () {
@@ -538,7 +529,6 @@ span.onclick = function () {
     setTimeout(() => {
         generarPreguntasIniciales();
         modal.style.display = "none";
-        switchToRobotImage();
     }, 300);
 }
 
@@ -547,11 +537,9 @@ window.onclick = function (event) {
         modal.style.left = "-320px";
         setTimeout(() => {
             modal.style.display = "none";
-            switchToRobotImage();
         }, 300);
     }
 }
 
 setTimeout(() => {
-    switchToRobotImage();
 }, 4000);

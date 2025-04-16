@@ -1,0 +1,19 @@
+.section-box {
+    background-color: rgba(128, 128, 128, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.color {
+    color: #004085; 
+}
+
+.section-box h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.section-box p {
+    font-size: 1.1rem;
+}
