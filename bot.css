@@ -112,10 +112,11 @@ body {
   display: none;
   position: fixed;
   right: 60px;
-  bottom: 110px;
-  z-index: 1;
+  top: 320px; 
+  z-index: 1001;
   width: 300px;
-  height: 400px;
+  height: 300px;
+  max-height: 49vh;
   background-color: #fefefe;
   border: 1px solid #888;
   border-radius: 10px;
@@ -123,20 +124,16 @@ body {
   overflow: hidden;
   transition: right 0.3s ease;
 }
-
 .modal-content {
-  height: 100%;
-  padding: 15px;
+  padding: 8px;
   box-sizing: border-box;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 
 #chatbot-container {
-  flex: 1;
+  flex: 0 1 auto;
   overflow-y: auto;
-  max-height: 100%;
 }
 
 .close {
@@ -207,8 +204,8 @@ body {
   .modal {
     width: 85%;
     right: 10%;
-    bottom: 130px;
-    height: 55%;
+    top: 300px;
+    overflow-y: visible;
   }
 }
 
@@ -227,7 +224,7 @@ body {
   .modal {
     width: 80%;
     right: 13%;
-    bottom: 130px;
+    top: 380px;
     height: 47%;
   }
 
@@ -256,8 +253,8 @@ body {
 
   .modal {
     width: 80%;
-    right: 13%;
-    bottom: 130px;
+    right: 8%;
+    top: 400px;
     height: 43%;
   }
 
