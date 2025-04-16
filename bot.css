@@ -193,7 +193,6 @@ body {
 .form-a {
   color: #0342b3;
 }
-
 @media (max-width: 375px) {
   .chatbot-button {
     width: 60px;
@@ -209,7 +208,7 @@ body {
   .modal {
     width: 85%;
     right: 10%;
-    margin-top: 240px;
+    margin-top: 180px;
     height: 55%;
   }
 }
