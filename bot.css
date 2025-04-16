@@ -188,3 +188,21 @@ body {
 .form-a {
   color: #0342b3;
 }
+@media (min-width: 370px) and (max-width: 768px) {
+  .modal{
+    top: 280px
+
+  }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .modal{
+    top: 280px
+
+  }
+}
+@media (min-width: 1440px) and (max-width: 2560px) {
+  .modal{
+    top: 280px
+
+  }
+}
