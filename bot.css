@@ -112,8 +112,7 @@ body {
   display: none;
   position: fixed;
   right: 60px;
-  bottom: 20px;
-  margin-top: 200px;
+  bottom: 110px;
   z-index: 1;
   width: 300px;
   height: 400px;
@@ -208,7 +207,7 @@ body {
   .modal {
     width: 85%;
     right: 10%;
-    margin-top: 240px;
+    bottom: 130px;
     height: 55%;
   }
 }
@@ -228,7 +227,7 @@ body {
   .modal {
     width: 80%;
     right: 13%;
-    margin-top: 280px;
+    bottom: 130px;
     height: 47%;
   }
 
@@ -258,7 +257,7 @@ body {
   .modal {
     width: 80%;
     right: 13%;
-    margin-top: 460px;
+    bottom: 130px;
     height: 43%;
   }
 
@@ -278,7 +277,7 @@ body {
     width: 320px;
     height: 70%;
     right: 60px;
-    margin-top: 110px;
+    bottom: 130px;
   }
 
   .popup-content {
